@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-
+import Image from 'next/image';
 export default function Home() {
     return (
         <div className={styles.container}>
@@ -13,6 +13,14 @@ export default function Home() {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>Welcome to Next.js!</h1>
+                <Image
+                    src="/image.jpg"
+                    blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                    alt="Picture of the author"
+                    placeholder="blur"
+                    height={400}
+                    width={800}
+                />
             </main>
 
             <footer className={styles.footer}>Dion Fananie</footer>
