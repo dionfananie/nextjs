@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import MainNavigation from './MainNavigation';
-// import './Layout.module.css';
+import styles from './Layout.module.css';
 
 function Layout(props) {
     return (
         <div>
             <MainNavigation />
-            <main className>{props.children}</main>
+            <main className={styles.main}>{props.children}</main>
         </div>
     );
 }

@@ -1,29 +1,15 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-// import { useContext } from 'react';
-
+import { useRouter } from 'next/router';
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
-// import FavoritesContext from '../../store/favorites-context';
 
 function MeetupItem(props) {
-    // const favoritesCtx = useContext(FavoritesContext);
+    const router = useRouter();
 
-    // const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
-
-    // function toggleFavoriteStatusHandler() {
-    //     if (itemIsFavorite) {
-    //         favoritesCtx.removeFavorite(props.id);
-    //     } else {
-    //         favoritesCtx.addFavorite({
-    //             id: props.id,
-    //             title: props.title,
-    //             description: props.description,
-    //             image: props.image,
-    //             address: props.address
-    //         });
-    //     }
-    // }
+    const showDetailsHandler = () => {
+        router.push('/' + props.id);
+    };
 
     return (
         <li className={classes.item}>
@@ -37,9 +23,7 @@ function MeetupItem(props) {
                     <p>{props.description}</p>
                 </div>
                 <div className={classes.actions}>
-                    {/* <button onClick={toggleFavoriteStatusHandler}>
-                        {itemIsFavorite ? 'Remove from Favorites' : 'To Favorites'}
-                    </button> */}
+                    <button onClick={showDetailsHandler}>Show Details</button>
                 </div>
             </Card>
         </li>
