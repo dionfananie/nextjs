@@ -12,9 +12,11 @@
   "dependencies": {
     "next": "^11.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "@notionhq/client": "^0.1.8"
   },
   "devDependencies": {
+    "autoprefixer": "^10.3.0",
     "eslint": "^7.27.0",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
@@ -22,6 +24,8 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.3.0"
+    "postcss": "^8.3.5",
+    "prettier": "^2.3.0",
+    "tailwindcss": "^2.2.4"
   }
 }
