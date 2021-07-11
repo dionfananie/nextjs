@@ -1,28 +1,21 @@
 import React from 'react';
-import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Image from 'next/image';
 import Link from 'next/link';
 import { arrayOf, object } from 'prop-types';
-const { Client } = require('@notionhq/client');
-
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
+import { fetchData } from '../lib/api';
 
 // in pages/index.js
 export async function getStaticProps() {
-    const databaseId = process.env.NOTION_DATABASE_ID;
-    const response = await notion.databases.query({ database_id: databaseId });
+    const data = await fetchData();
     return {
         props: {
-            blogs: response.results
+            blogs: data
         }
     };
 }
 
 export default function Home({ blogs }) {
     const renderBlog = () => {
-        console.log(blogs);
-
         if (blogs) {
             return (
                 <>
@@ -50,5 +43,6 @@ export default function Home({ blogs }) {
 }
 
 Home.propTypes = {
-    blogs: arrayOf(object)
+    blogs: arrayOf(object),
+    page: arrayOf(object)
 };
