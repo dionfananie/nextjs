@@ -2,11 +2,37 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { arrayOf, object } from 'prop-types';
-import Layout from 'components/Layout';
+import Head from 'next/head';
 
 export default function Home() {
     return (
-        <Layout>
+        <>
+            <Head>
+                <title>Dion Fananie&#39;s React Playground </title>
+                <meta name="title" content="Dion Fananie's React Playground " />
+                <meta
+                    name="description"
+                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://next.dionfananie.com/" />
+                <meta property="og:title" content="Dion Fananie's React Playground " />
+                <meta
+                    property="og:description"
+                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
+                />
+                <meta property="og:image" content="" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://next.dionfananie.com/" />
+                <meta property="twitter:title" content="Dion Fananie's React Playground " />
+                <meta
+                    property="twitter:description"
+                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
+                />
+                <meta property="twitter:image" content="" />
+            </Head>
             <div className={styles.container}>
                 <main className={styles.main}>
                     <h1 className="mb-5 text-7xl font-semibold">Dion Fananie</h1>
@@ -27,7 +53,7 @@ export default function Home() {
 
                 <footer className={styles.footer}>Dion Fananie</footer>
             </div>
-        </Layout>
+        </>
     );
 }
 
