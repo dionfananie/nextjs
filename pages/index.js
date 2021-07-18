@@ -22,7 +22,7 @@ export default function Home() {
                     property="og:description"
                     content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
                 />
-                <meta property="og:image" content="" />
+                <meta property="og:image" content="/preview.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://next.dionfananie.com/" />
@@ -31,7 +31,7 @@ export default function Home() {
                     property="twitter:description"
                     content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
                 />
-                <meta property="twitter:image" content="" />
+                <meta property="twitter:image" content="/preview.png" />
             </Head>
             <div className={styles.container}>
                 <main className={styles.main}>
