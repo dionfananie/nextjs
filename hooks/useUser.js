@@ -9,7 +9,7 @@ const useUser = async (username, password) => {
     }).then((t) => t.json());
     const token = res.token;
     if (token) {
-        cookie.set('token-auth', token);
+        cookie.set('token-auth', token, { expires: 1 });
         return { message: 'Success!', user: true };
     } else {
         return { message: 'something went wrong', user: false };

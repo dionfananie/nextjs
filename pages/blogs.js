@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import { arrayOf, object } from 'prop-types';
 import { fetchData } from '../lib/api';
+import Layout from 'components/Layout';
 
 // in pages/index.js
 export async function getStaticProps() {
@@ -34,11 +35,13 @@ export default function Home({ blogs }) {
         return null;
     };
     return (
-        <div className={styles.container}>
-            <main className={styles.main}>{renderBlog()}</main>
+        <Layout>
+            <div className={styles.container}>
+                <main className={styles.main}>{renderBlog()}</main>
 
-            <footer className={styles.footer}>Dion Fananie</footer>
-        </div>
+                <footer className={styles.footer}>Dion Fananie</footer>
+            </div>
+        </Layout>
     );
 }
 
