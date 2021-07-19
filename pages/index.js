@@ -2,37 +2,12 @@ import React from 'react';
 import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { arrayOf, object } from 'prop-types';
-import Head from 'next/head';
+import MetaHead from 'components/MetaHead';
 
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Dion Fananie&#39;s React Playground </title>
-                <meta name="title" content="Dion Fananie's React Playground " />
-                <meta
-                    name="description"
-                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
-                />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://next.dionfananie.com/" />
-                <meta property="og:title" content="Dion Fananie's React Playground " />
-                <meta
-                    property="og:description"
-                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
-                />
-                <meta property="og:image" content="/preview.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://next.dionfananie.com/" />
-                <meta property="twitter:title" content="Dion Fananie's React Playground " />
-                <meta
-                    property="twitter:description"
-                    content="React Playground, Nextjs, Notion, Auth JWT, Many more. "
-                />
-                <meta property="twitter:image" content="/preview.png" />
-            </Head>
+            <MetaHead />
             <div className={styles.container}>
                 <main className={styles.main}>
                     <h1 className="mb-5 text-7xl font-semibold">Dion Fananie</h1>
